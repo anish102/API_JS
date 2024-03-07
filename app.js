@@ -1,12 +1,20 @@
+require("dotenv").config();
 const express = require("express");
+
 const app = express();
 
-const port = 3000;
+app.get("/", (req, res) => {
+  res.send("Hello world!");
+});
 
-const routes = require(`./routes`);
+app.get("/profile", (req, res) => {
+  res.send("<h1>anish102</h1>");
+});
 
-app.use(`/api`, routes);
+app.get("/github", (req, res) => {
+  res.send("https://github.com/anish102");
+});
 
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+app.listen(process.env.PORT, () => {
+  console.log(`Server running at http://localhost:${process.env.PORT}`);
 });
