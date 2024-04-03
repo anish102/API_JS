@@ -13,7 +13,7 @@ export default asyncHandler;
 //       } catch (error) {
 //         res
 //           .status(err.code || 500)
-//           .json({ succeess: false, meassage: err.meassage });
+//           .json({ succeess: false, message: err.message });
 //       }
 //     };
 //   };
