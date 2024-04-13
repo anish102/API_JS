@@ -31,7 +31,7 @@ const app = express();
       console.log(`App is listening on port ${process.env.PORT}`);
     });
   } catch (error) {
-    console.error("Error: ", error);
+    console.error("Error: ",error);
     throw error;
   }
 })();
